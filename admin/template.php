@@ -23,6 +23,32 @@ include_once("includes/head.php");//head.php file include
             <div id="layoutSidenav_content">
                 <!-- start main -->
                 <main>
+                    <div class="container-fluid">
+                    <?php
+                        if(isset($view))
+                        {
+                            if($view=="dashboard")
+                            {
+                                include("view/dash_view.php");//show dashboard contant
+                            }
+                            elseif($view=="add_post"){
+                                include("view/add_post_view.php");//show add_post contant
+                            }
+                            elseif($view=="add_category"){
+                                include("view/add_category_view.php");//show add_category contant
+                            }
+                            elseif($view=="manage_post"){
+                                include("view/manage_post_view.php");//show manage_post contant
+                            }
+                            elseif($view=="manage_category"){
+                                include("view/manage_category_view.php");//show manage_category contant
+                            }
+                        }
+
+                           
+                    ?>
+                    
+                    </div>
                 </main>
                 <!-- end main -->
                  <!-- start footer -->
