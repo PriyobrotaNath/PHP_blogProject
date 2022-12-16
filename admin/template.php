@@ -1,3 +1,19 @@
+<?php
+include("class/function.php");//include function page
+ session_start();//session open and access session data 
+ $std_id=$_SESSION['adminID'];// match Id 
+ 
+ if($std_id==null){
+     header("location:index.php");// if id does not match go through the index.php  
+ }
+ 
+
+
+?>
+
+
+
+
 <!-- start php head part -->
 <?php
 

@@ -1,3 +1,25 @@
+
+<?php
+
+include("class/function.php");
+$objAdmin=new adminBlog();
+if(isset($_POST['admin_login'])){
+     $return_msg=$objAdmin->admin_login($_POST);
+}
+
+  session_start();
+  $std_id=$_SESSION['adminID'];// match Id 
+  if($std_id){
+      header("location:dashboard.php");// if login,can not access login page again,if try go through the dashboard page 
+  }
+
+
+?>
+
+
+
+
+
 <!-- start php head part -->
 <?php
 
