@@ -41,7 +41,7 @@ if (isset($del_msg)) {
                 <?php echo $cat['cat_Des']; ?>
             </td>
             <td>
-                <a class="btn btn-primary" href="#">Edit</a>
+                <a class="btn btn-primary" href="edit.php?status=edit&&id=<?php echo $cat['cat_ID']; ?>">Edit</a>
                 <a class="btn btn-warning" href="?status=delete&&id=<?php echo $cat['cat_ID']; ?>">Delete</a>
             </td>
         </tr>

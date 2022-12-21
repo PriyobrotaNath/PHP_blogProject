@@ -92,6 +92,33 @@ class adminBlog
 
     }
 
+    // DB conection call,received individual data 
+    public function display_catdata_by_id($id)
+    {
+        $query = " SELECT * From category where cat_ID=$id";
+        if (mysqli_query($this->conn, $query)) #connection and query
+        {
+            $returnCatdata = mysqli_query($this->conn, $query);
+            $catData = mysqli_fetch_assoc($returnCatdata);
+            return $catData;
+        }
+    }
+
+
+    public function update_category_info($data)
+    {
+        $std_cat_name = $data['u_cat_name'];
+        $std_cat_des = $data['u_cat_des'];
+        $std_cat_idNo = $data['u_cat_id'];
+
+        $query = "UPDATE category SET cat_Name='$std_cat_name',  cat_Des='$std_cat_des' WHERE cat_ID='$std_cat_idNo'";
+        if (mysqli_query($this->conn, $query)) #connection and query
+        {
+            return "Informtion Updated Successfully!";
+        }
+    }
+
+
 
 
 
