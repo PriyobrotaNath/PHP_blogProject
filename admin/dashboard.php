@@ -1,4 +1,4 @@
 <?php
-    $view="dashboard";
-    include("template.php");
+$view = "dashboard";
+include("template.php");
 ?>

@@ -1,4 +1,4 @@
 <?php
-    $view="manage_category";
-    include("template.php");
+$view = "manage_category";
+include("template.php");
 ?>

@@ -9,8 +9,8 @@
                     <!-- start form -->
                     <?php
 
-                    include_once("includes/form.php");//form.php file include
-
+                    include_once("includes/form.php"); //form.php file include
+                    
                     ?>
                     <!-- end form -->
                 </div>

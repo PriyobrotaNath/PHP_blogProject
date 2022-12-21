@@ -1,10 +1,17 @@
 <?php
 include("class/function.php");//include function page
- session_start();//session open and access session data 
+$obj=new adminBlog();
+session_start();//session open and access session data 
  $std_id=$_SESSION['adminID'];// match Id 
  
- if($std_id==null){
+ if($std_id==null){ //adminID check
      header("location:index.php");// if id does not match go through the index.php  
+ }
+// logout part
+ if(isset($_GET['adminlogout'])){
+    if($_GET['adminlogout']=='logout'){
+        $obj->adminLogout();
+    }
  }
  
 
